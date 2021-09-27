@@ -1,4 +1,4 @@
-<p style="color:orange">INTRODUCTION</p>
+<span style="color:orange">INTRODUCTION</span>
 
 Recent works proposing modern NLP models for the document-level information extraction tasks (Du et al., 2021; Li et al., 2021; Jain et al., 2020) have their performance measured by different datasets via varying metrics, with limited, often manual analysis of model errors which are less informative (e.g., scores alone cannot detail model’s tendency to assign incorrect types to selected noun phrases, or frequency of spurious templates/clustering generation). There has not been a systematic investigation on models’ error profiles across domain-diverse document-level IE datasets.
 
