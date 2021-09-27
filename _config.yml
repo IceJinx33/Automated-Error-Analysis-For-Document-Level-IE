@@ -1,4 +1,4 @@
-theme: jekyll-theme-midnight
+theme: jekyll-theme-slate
 title: automated error analysis for document level ie
 github:
   is_project_page: false
