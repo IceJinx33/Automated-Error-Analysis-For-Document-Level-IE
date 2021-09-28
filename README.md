@@ -130,6 +130,7 @@ The  transformations in the Transformations Section are mapped onto thirteen err
   
 <h5><span style="color:#785EF0">DyGIE++ is worse at coreference resolution when compared to GTT as DyGIE++ makes more duplicate role filler errors across all datasets.</span></h5>
 
+<hr>
 <div class="People">
   <h5><p style="color:#785EF0">CONTRIBUTORS:</p></h5>
   <p>Aliva Das (ad677@cornell.edu)</p>
