@@ -24,7 +24,7 @@ Table 1 presents statistics for the three datasets that we conduct experiments a
 
 <h3><p style="color:#FE6100"><b>Evaluation</b></p></h3>
 
-<img src = "assets/f1eq.png" class = "center"/>
+<img src = "assets/f1eq_white.png" class = "center"/>
 <br>Figure 2: F1 Evaluation Metric.
 
 We use F1 score from MUC-4 (Chinchor, 1992) which is shown in Figure 2 above. As the precision and recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
