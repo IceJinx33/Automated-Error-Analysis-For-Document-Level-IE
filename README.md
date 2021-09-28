@@ -48,6 +48,7 @@ Given the input consisting of the predicted and gold templates for every documen
 <br>
 Figure 3: Automated transformations convert predicted templates (on the left) to desired templates (on the right). Arrows represent transformations. Colored circles represent role-filler entity mentions.
 <br>
+
 There are a fixed set of transformations involved in changing  the  predicted  templates  to  the  desired templates (with 100% F1) as detailed below:
 
 <img src = "assets/scsabs.png"/> 
