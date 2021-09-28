@@ -69,7 +69,7 @@ There are a fixed set of transformations involved in changing the predicted temp
   5. **Remove Unrelated Spurious Role Filler** removes a role filler that has not been mentioned in any of the gold templates for a given document.
   6. **Introduce Missing Role Filler** introduces a role filler that was not present in the predicted template but was required to be present in the matching gold template.
   7. **Remove Spurious Template** removes a predicted template that could not be matched to any gold template for a given document.
-  8. <span style="color:#DC267F">Introduce Missing Template</span> introduces a template that can be matched to an unmatched gold template for a given document.
+  8. **Introduce Missing Template** introduces a template that can be matched to an unmatched gold template for a given document.
 
 <h3><p style="color:#FE6100"><b>Error Type Mappings</b></p></h3>
 
