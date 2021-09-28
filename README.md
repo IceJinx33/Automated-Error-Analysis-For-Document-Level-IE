@@ -118,15 +118,15 @@ The  transformations in the Transformations Section are mapped onto thirteen err
 <br>
 *Table 3: Precision, Recall and F1 Scores (%).*
 
-<h5><span style="color:#785EF0">Models perform poorly on scientific text (ProMed, SciREX) as compared to news (MUC-4).</span></h4> 
+<h5><span style="color:#785EF0">Models perform poorly on scientific text (ProMed, SciREX) as compared to news (MUC-4).</span></h5> 
   
   From Table 3, we see that models, in general, perform worse on scientific datasets as compared to non-scientific datasets (like news), likely because most model bases are pretrained on text from different domains or there are not enough representative examples of scientific-style text in the pretraining corpus. In addition, models seem to perform better on the news-style ProMed dataset than the scientific- paper-based long-text SciREX dataset. This can be explained by the fact that the pretraining corpus contains more event-based examples, and that all our current models taken in only a maximum of 512 tokens as inputs, which means a majority of the text is truncated out and never processed by the models. 
   
   We see an increase in the F1 score in all SciBERT-based models when compared to their BERT counterparts in the SciREX dataset. In the ProMed dataset, even though the SciBERT-based models do perform better in the scientific slots (Disease, Victims), BERT-based models perform significantly better on the non-scientific slots (Status, Country), and hence achieve a higher total F1 score.
   
-<h5><span style="color:#785EF0">GTT will perform better than DyGIE++ when there is more than one relevant event in the document.</span></h4>
+<h5><span style="color:#785EF0">GTT will perform better than DyGIE++ when there is more than one relevant event in the document.</span></h5>
   
   From the error count results in Figure 6, we see that for all datasets, GTT models make fewer Missing Template errors than DyGIE++ mod- els do, except for the DyGIE++ (BERT) model on the SciREX dataset, which has fewer Missing Template errors when compared to the GTT (BERT) model. This is possibly because DyGIE++ (BERT) is prone to overgeneration - there are significantly more spurious role fillers as compared to the other models. Since we use a heuristic that puts all the extracted role fillers in one template, this increases the probability that there was a possible match to a gold template, reducing the number of Missing Template Errors.
   
-<h5><span style="color:#785EF0">DyGIE++ is worse at coreference resolution when compared to GTT as DyGIE++ makes more duplicate role filler errors across all datasets.</span></h4>
+<h5><span style="color:#785EF0">DyGIE++ is worse at coreference resolution when compared to GTT as DyGIE++ makes more duplicate role filler errors across all datasets.</span></h5>
   
