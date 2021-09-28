@@ -103,8 +103,22 @@ The  transformations in the Transformations Section are mapped onto thirteen err
      - SciBERT
   
 <h3><p style="color:#FE6100"><b>Results and Analysis</b></p></h3>
+
+<img src = "assets/output.png"/> 
+<br>
+*Figure 7: Sample analysis of predicted templates for a document from our automated error analysis tool.*
+
+<br>
+<img src = "assets/errorcounts.png"/>
+<br>
+*Figure 8: Error statistics for all dataset outputs from all available models.*
   
 <span style="color:#785EF0">Models perform poorly on scientific text (ProMed, SciREX) as compared to news (MUC-4).</span> 
+
+<br>
+<img src = "assets/metrics.png"/>
+<br>
+*Table 3: Precision, Recall and F1 Scores (%).*
   
   From Table 3, we see that models, in general, perform worse on scientific datasets as compared to non-scientific datasets (like news), likely because most model bases are pretrained on text from different domains or there are not enough representative examples of scientific-style text in the pretraining corpus. In addition, models seem to perform better on the news-style ProMed dataset than the scientific- paper-based long-text SciREX dataset. This can be explained by the fact that the pretraining corpus contains more event-based examples, and that all our current models taken in only a maximum of 512 tokens as inputs, which means a majority of the text is truncated out and never processed by the models. 
   
