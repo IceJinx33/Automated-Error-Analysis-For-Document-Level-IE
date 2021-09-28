@@ -44,20 +44,24 @@ Given the input consisting of the predicted and gold templates for every documen
 
 <h3><p style="color:#FE6100"><b>Transformations</b></p></h3>
 
+<img src = "assets/transformations.png"/>
+<br>
+Figure 3: Automated transformations convert predicted templates (on the left) to desired templates (on the right). Arrows represent transformations. Colored circles represent role-filler entity mentions.
+
 There are a fixed set of transformations involved in changing  the  predicted  templates  to  the  desired templates (with 100% F1) as detailed below:
 
 <img src = "assets/scsabs.png"/> 
 <br>
-Figure 3: Formula for absolute SCS.
+Figure 4: Formula for absolute SCS.
 
 <br>
 <img src = "assets/scsgeo.png"/>
 <br>
-Figure 4: Formula for geometric mean SCS.
+Figure 5: Formula for geometric mean SCS.
 
-  1. <span style="color:#785EF0">Alter Span</span> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. To calculate the span comparison score between two spans x and y, we use one of two scoring modes:
+  1. <span style="color:#785EF0">Alter Span</span> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. As seen in Figure 4 above, to calculate the span comparison score between two spans x and y, we use one of two scoring modes:
   - **absolute**:  This mode captures the (positive) distance between the starting indices (and ending indices) of spans x and y in the document, and scales that value by the sum of the lengths of x and y, capping it at a maximum of 1.
-  - **geometric mean**: This mode captures the degree of disjointedness between spans x and y by dividing the length of the overlap between the two spans with respective to each of their lengths, multiplying those two fractions and subtracting the final result from 1. If *si* is the length of the intersection of spans x and y, and neither x nor y have length 0, *SCS* is calculated as shown below. Else, *SCS* is 1. 
+  - **geometric mean**: As seen in Figure 5 above, this mode captures the degree of disjointedness between spans x and y by dividing the length of the overlap between the two spans with respective to each of their lengths, multiplying those two fractions and subtracting the final result from 1. If *si* is the length of the intersection of spans x and y, and neither x nor y have length 0, *SCS* is calculated as shown below. Else, *SCS* is 1. 
   - Thus, if the predicted role filler is an exact match for the gold role filler, the *SCS* is 0. If there is some overlap between the spans, the *SCS* is between 0 and 1 (not inclusive), and if there is no overlap between the spans, the *SCS* is 1.
   2. <span style="color:#785EF0">Alter Role</span> changes the role of a role filler to another role within the same template.
   3. <span style="color:#785EF0">Remove Duplicate Role Filler</span> removes a role filler that is co-referent to an already matched role filler.
@@ -68,5 +72,9 @@ Figure 4: Formula for geometric mean SCS.
   8. <span style="color:#785EF0">Introduce Missing Template</span> introduces a template that can be matched to an unmatched gold template for a given document.
 
 <h3><p style="color:#FE6100"><b>Error Type Mappings</b></p></h3>
+
+<img src = "assets/errors.png"/>
+<br>
+Table 2: Examples of the Error Types from the MUC-4 dataset. For each template, in every role, the role fillers within brackets refer to the same entity, while role fillers in different brackets refer to different entities. The text in bold black indicates the error in the prediction.
 
 <h3><p style="color:#FE6100"><b>Results and Analysis</b></p></h3>
