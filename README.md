@@ -27,4 +27,20 @@ Table 1 presents statistics for the three datasets that we conduct experiments a
 <img src = "assets/f1eq_white.png">
 <br>Figure 2: F1 Evaluation Metric.
 
-We use F1 score from MUC-4 (Chinchor, 1992) which is shown in Figure 2 above, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
+We use <span style="color:#785EF0">F1 score</span> from MUC-4 (Chinchor, 1992) which is shown in Figure 2 above, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
+
+<h3><p style="color:#FE6100"><b>Methodology</b></p></h3>
+
+Similar  to  the  work  of  Kummerfeld  and  Klein (2013), our error analysis tool is  <span style="color:#785EF0">system-agnostic</span>, i.e. it only uses system output and does not consider intermediate system decisions. This is because we wanted a tool that would allow for error analysis and comparison across different kinds of systems - end to end or pipeline; neural or pattern-based, and there were no other methods that could be uniformly applied across all systems. Our tool is also  <span style="color:#785EF0">dataset-agnostic</span>, simply requiring the names of the slots/roles to be specified in order to read data correctly from the input file and displaying per slot precision, recall and F1.
+
+Given the input consisting of the predicted and gold templates for every document in the dataset, our error analysis tool performs the folowing steps:
+
+1. Finds an <span style="color:#785EF0">optimized matching</span> of the predicted templates to the gold templates per document, choosing the matching attains a higher total F1 score across all slots/roles.
+2. Comparing the matched pair of predicted and gold templates in a document, we <span style="color:#785EF0">apply transformations</span> in order to <span style="color:#785EF0">convert the system predicted templates into the desired templates</span> that would attain a 100% F1 score upon evaluation with respect to the gold templates. 
+3. The changes made in the conversion process are then <span style="color:#785EF0">mapped to different error types</span>.
+
+<h3><p style="color:#FE6100"><b>Transformations</b></p></h3>
+
+<h3><p style="color:#FE6100"><b>Error Type Mappings</b></p></h3>
+
+<h3><p style="color:#FE6100"><b>Results and Analysis</b></p></h3>
