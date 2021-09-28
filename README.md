@@ -1,7 +1,7 @@
 <h1><p style="color:#DC267F"><b>Automated Error Analysis for Document Level Information Extraction From Scientific Text</b></p></h1>
 
 <br>
-<img src = "assets/error_analysis_system.png" width="80%"/>
+<img src = "assets/error_analysis_system.png"/>
 <br>Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).
 
 <h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
@@ -27,4 +27,4 @@ Table 1 presents statistics for the three datasets that we conduct experiments a
 <img src = "assets/f1eq_white.png">
 <br>Figure 2: F1 Evaluation Metric.
 
-We use F1 score from MUC-4 (Chinchor, 1992) which is shown in Figure 2 above. As the precision and recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
+We use F1 score from MUC-4 (Chinchor, 1992) which is shown in Figure 2 above, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
