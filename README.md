@@ -30,7 +30,9 @@ Table 1 presents statistics for the three datasets that we conduct experiments a
 
 <img src = "assets/f1eq_white.png">
 
-We use <span style="color:#785EF0">F1 score</span> from MUC-4 (Chinchor, 1992) which is shown above, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
+<br>
+Figure 2: F1 Evaluation Metric.
+We use <span style="color:#785EF0">F1 score</span> from MUC-4 (Chinchor, 1992) which is shown above in Figure 2, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
 
 <h3><p style="color:#FE6100"><b>Methodology</b></p></h3>
 
@@ -50,11 +52,15 @@ There are a fixed set of transformations involved in changing  the  predicted  t
   - **absolute**:  This mode captures the (positive) distance between the starting indices (and ending indices) of spans x and y in the document, and scales that value by the sum of the lengths of x and y, capping it at a maximum of 1.
   - **geometric mean**: This mode captures the degree of disjointedness between spans x and y by dividing the length of the overlap between the two spans with respective to each of their lengths, multiplying those two fractions and subtracting the final result from 1. If *si* is the length of the intersection of spans x and y, and neither x nor y have length 0, *SCS* is calculated as shown below. Else, *SCS* is 1.
 
-<p float="left">
-  <img src = "assets/scsabs.png" height="132px"/> 
-  <img src = "assets/scsgeo.png"/>
-</p>
-Figure 3: Formulas for absolute SCS (left) and geometric mean SCS (right).
+<img src = "assets/scsabs.png"/> 
+
+<br>
+Figure 3: Formula for absolute SCS.
+<br>
+<img src = "assets/scsgeo.png"/>
+
+<br>
+Figure 4: Formula for geometric mean SCS.
 
   Thus, if the predicted role filler is an exact match for the gold role filler, the *SCS* is 0. If there is some overlap between the spans, the *SCS* is between 0 and 1 (not inclusive), and if there is no overlap between the spans, the *SCS* is 1.
 
