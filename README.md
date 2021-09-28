@@ -129,4 +129,17 @@ The  transformations in the Transformations Section are mapped onto thirteen err
   From the error count results in Figure 6, we see that for all datasets, GTT models make fewer Missing Template errors than DyGIE++ mod- els do, except for the DyGIE++ (BERT) model on the SciREX dataset, which has fewer Missing Template errors when compared to the GTT (BERT) model. This is possibly because DyGIE++ (BERT) is prone to overgeneration - there are significantly more spurious role fillers as compared to the other models. Since we use a heuristic that puts all the extracted role fillers in one template, this increases the probability that there was a possible match to a gold template, reducing the number of Missing Template Errors.
   
 <h5><span style="color:#785EF0">DyGIE++ is worse at coreference resolution when compared to GTT as DyGIE++ makes more duplicate role filler errors across all datasets.</span></h5>
+
+<div class="People">
+  <h5><p style="color:#785EF0">CONTRIBUTORS:</p></h5>
+  <p>Aliva Das (ad677@cornell.edu)</p>
+  <p>Xinya Du (xdu@cs.cornell.edu)</p>
+  <p>Barry Wang (zw545@cornell.edu)</p>
+  <p>Jiayuan Gu (jg844@cornell.edu)</p>
+  <p>Kejian Shi (ks4765@nyu.edu)</p>
+  <p>Thomas Porter (tjp78@cornell.edu)</p>
+  <h5><p style="color:#FE6100">ADVISOR:</p></h5>
+  <p>Claire Cardie (cardie@cs.cornell.edu) </p>
+  We would like to thank Cornell University's <a href="https://www.cs.cornell.edu/undergrad/uresch/computer-science-undergraduate-research-program-csurp">Computer Science Undergraduate Research Program (CSURP)</a> for giving us the opportunity to work on this project during Summer 2021.
+</div>
   
