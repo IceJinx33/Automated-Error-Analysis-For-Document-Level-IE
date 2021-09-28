@@ -1,6 +1,6 @@
 <h1><p style="color:#DC267F"><b>Automated Error Analysis for Document Level Information Extraction From Scientific Text</b></p></h1>
 
-<img src = "assets/error_analysis_system.png" height = "350" width = "900"/>
+<img src = "assets/error_analysis_system.png" height = "150" width = "500"/>
 Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).
 
 <h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
