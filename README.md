@@ -46,10 +46,6 @@ Given the input consisting of the predicted and gold templates for every documen
 
 There are a fixed set of transformations involved in changing  the  predicted  templates  to  the  desired templates (with 100% F1) as detailed below:
 
-  1. <span style="color:#785EF0">Alter Span</span> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. To calculate the span comparison score between two spans x and y, we use one of two scoring modes:
-  - **absolute**:  This mode captures the (positive) distance between the starting indices (and ending indices) of spans x and y in the document, and scales that value by the sum of the lengths of x and y, capping it at a maximum of 1.
-  - **geometric mean**: This mode captures the degree of disjointedness between spans x and y by dividing the length of the overlap between the two spans with respective to each of their lengths, multiplying those two fractions and subtracting the final result from 1. If *si* is the length of the intersection of spans x and y, and neither x nor y have length 0, *SCS* is calculated as shown below. Else, *SCS* is 1.
-
 <img src = "assets/scsabs.png"/> 
 <br>
 Figure 3: Formula for absolute SCS.
@@ -59,8 +55,10 @@ Figure 3: Formula for absolute SCS.
 <br>
 Figure 4: Formula for geometric mean SCS.
 
-  Thus, if the predicted role filler is an exact match for the gold role filler, the *SCS* is 0. If there is some overlap between the spans, the *SCS* is between 0 and 1 (not inclusive), and if there is no overlap between the spans, the *SCS* is 1.
-  
+  1. <span style="color:#785EF0">Alter Span</span> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. To calculate the span comparison score between two spans x and y, we use one of two scoring modes:
+  - **absolute**:  This mode captures the (positive) distance between the starting indices (and ending indices) of spans x and y in the document, and scales that value by the sum of the lengths of x and y, capping it at a maximum of 1.
+  - **geometric mean**: This mode captures the degree of disjointedness between spans x and y by dividing the length of the overlap between the two spans with respective to each of their lengths, multiplying those two fractions and subtracting the final result from 1. If *si* is the length of the intersection of spans x and y, and neither x nor y have length 0, *SCS* is calculated as shown below. Else, *SCS* is 1. 
+  - Thus, if the predicted role filler is an exact match for the gold role filler, the *SCS* is 0. If there is some overlap between the spans, the *SCS* is between 0 and 1 (not inclusive), and if there is no overlap between the spans, the *SCS* is 1.
   2. <span style="color:#785EF0">Alter Role</span> changes the role of a role filler to another role within the same template.
   3. <span style="color:#785EF0">Remove Duplicate Role Filler</span> removes a role filler that is co-referent to an already matched role filler.
   4. <span style="color:#785EF0">Remove Cross Template Spurious Role Filler</span> removes a role filler that would be correct if present in another template (in the same role).
