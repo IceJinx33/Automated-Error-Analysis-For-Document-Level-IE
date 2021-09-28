@@ -36,10 +36,18 @@ Similar  to  the  work  of  Kummerfeld  and  Klein (2013), our error analysis to
 Given the input consisting of the predicted and gold templates for every document in the dataset, our error analysis tool performs the folowing steps:
 
 1. Finds an <span style="color:#785EF0">optimized matching</span> of the predicted templates to the gold templates per document, choosing the matching attains a higher total F1 score across all slots/roles.
-2. Comparing the matched pair of predicted and gold templates in a document, we <span style="color:#785EF0">apply transformations</span> in order to <span style="color:#785EF0">convert the system predicted templates into the desired templates</span> that would attain a 100% F1 score upon evaluation with respect to the gold templates. 
-3. The changes made in the conversion process are then <span style="color:#785EF0">mapped to different error types</span>.
+2. Compares the matched pair of predicted and gold templates in a document, and <span style="color:#785EF0">applies transformations</span> in order to <span style="color:#785EF0">convert the system predicted templates into the desired templates</span> that would attain a 100% F1 score upon evaluation with respect to the gold templates. 
+3. <span style="color:#785EF0">Maps the changes</span> made in the conversion process <span style="color:#785EF0">to different error types</span>.
 
 <h3><p style="color:#FE6100"><b>Transformations</b></p></h3>
+
+There are a fixed set of transformations involved in changing  the  predicted  templates  to  the  desired templates (with 100% F1) as detailed below:
+
+1. <span style="color:#785EF0">Alter Span</span> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. To calculate the span comparison score between two spans x and y, we use one of two scoring modes:
+  a. **absolute**:  This mode captures the (positive) distance between the starting indices (and ending indices) of spans x and y in the document, and scales that value by the sum of the lengths of x and y, capping it at a maximum of 1.
+  b. **geometric_mean**: This mode captures the degree of disjointedness between spans x and y by dividing the length of the overlap between the two spans with respective to each of their lengths, multiplying those two fractions and subtracting the final result from 1. If *si* is the length of the intersection of spans x and y, and neither x nor y have length 0, *SCS* is calculated as shown below. Else, *SCS* is 1.
+  
+Thus, if the predicted role filler is an exact match for the gold role filler, the *SCS* is 0. If there is some overlap between the spans, the *SCS* is between 0 and 1 (not inclusive), and if there is no overlap between the spans, the *SCS* is 1.
 
 <h3><p style="color:#FE6100"><b>Error Type Mappings</b></p></h3>
 
