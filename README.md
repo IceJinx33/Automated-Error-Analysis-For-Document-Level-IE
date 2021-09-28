@@ -96,11 +96,11 @@ The  transformations in the Transformations Section are mapped onto thirteen err
 <h3><p style="color:#FE6100"><b>Models Used</b></p></h3>
 
   -  <span style="color:#785EF0">GTT</span> (Du et al., 2021)
-   - BERT
-   - SciBERT
+     - BERT
+     - SciBERT
   -  <span style="color:#785EF0">DyGIE++</span> (Wadden et al., 2019) along with a heuristic clustering algorithm 
-   - BERT
-   - SciBERT
+     - BERT
+     - SciBERT
   
 <h3><p style="color:#FE6100"><b>Results and Analysis</b></p></h3>
   
