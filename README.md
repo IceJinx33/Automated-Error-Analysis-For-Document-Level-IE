@@ -3,6 +3,7 @@
 <br>
 <img src = "assets/error_analysis_system.png"/>
 
+<br>
 Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).
 
 <h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
@@ -17,12 +18,13 @@ In this work, we introduce several representative document-level IE datasets. Th
 
 <img src = "assets/dataset_stats.png"/>
 
+<br>
 Table 1: Dataset Statistics. A relevant document has one or more templates.
 
 Table 1 presents statistics for the three datasets that we conduct experiments and error analysis on. 
-- <span style="color:#785EF0"><b>MUC-4</b></span> (MUC-4, 1992) consists of news, each of which describes one or more terrorist incidents. The slots/roles that we chose to extract from the dataset were *Incident Type*, *Perpetrator (Individual)*, *Perpetrator (Organization)*, *(Physical) Target*, *Victim* and *Weapon*.
-- <span style="color:#785EF0"><b>ProMed</b></span> (http://www.promedmail.org) consists of global disease outbreak reports. The slots/roles that we chose to extract from the dataset were *Status*, *Country*, *Disease*, and *Victims*.
-- <span style="color:#785EF0"><b>SciREX</b></span> (Jain et al., 2020) is a recent dataset for scientific document-level IE, consisting of annotated articles on Machine Learning from Papers with Code, where we specifically focus on its 4-ary relation extraction sub-task. The slots/roles that we chose to extract are *Material*, *Method*, *Metric* and *Task*.
+- <span style="color:#785EF0">MUC-4/span> (MUC-4, 1992) consists of news, each of which describes one or more terrorist incidents. The slots/roles that we chose to extract from the dataset were *Incident Type*, *Perpetrator (Individual)*, *Perpetrator (Organization)*, *(Physical) Target*, *Victim* and *Weapon*.
+- <span style="color:#785EF0">ProMed</span> (http://www.promedmail.org) consists of global disease outbreak reports. The slots/roles that we chose to extract from the dataset were *Status*, *Country*, *Disease*, and *Victims*.
+- <span style="color:#785EF0">SciREX</span> (Jain et al., 2020) is a recent dataset for scientific document-level IE, consisting of annotated articles on Machine Learning from Papers with Code, where we specifically focus on its 4-ary relation extraction sub-task. The slots/roles that we chose to extract are *Material*, *Method*, *Metric* and *Task*.
 
 <h3><p style="color:#FE6100"><b>Evaluation</b></p></h3>
 
@@ -44,7 +46,7 @@ Given the input consisting of the predicted and gold templates for every documen
 
 There are a fixed set of transformations involved in changing  the  predicted  templates  to  the  desired templates (with 100% F1) as detailed below:
 
-1. <span style="color:#785EF0"><b>Alter Span</b></span> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. To calculate the span comparison score between two spans x and y, we use one of two scoring modes:
+  1. <b><span style="color:#785EF0">Alter Span</span></b> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. To calculate the span comparison score between two spans x and y, we use one of two scoring modes:
   - **absolute**:  This mode captures the (positive) distance between the starting indices (and ending indices) of spans x and y in the document, and scales that value by the sum of the lengths of x and y, capping it at a maximum of 1.
   
   <img src = "assets/scsabs.png"/>
