@@ -14,11 +14,17 @@ In this work, we introduce several representative document-level IE datasets. Th
 
 <h3><p style="color:#FE6100"><b>Datasets</b></p></h3>
 
+<img src = "assets/dataset_stats.png" class = "center"/>
+<br>Table 1: Dataset Statistics. A relevant document has one or more templates.
+
 Table 1 presents statistics for the three datasets that we conduct experiments and error analysis on. 
 - <span style="color:#785EF0">MUC-4</span> (MUC-4, 1992) consists of news, each of which describes one or more terrorist incidents. The slots/roles that we chose to extract from the dataset were **Incident Type**, **Perpetrator (Individual)**, **Perpetrator (Organization)**, **(Physical) Target**, **Victim** and **Weapon**.
 - <span style="color:#785EF0">ProMed</span> (http://www.promedmail.org) consists of global disease outbreak reports. The slots/roles that we chose to extract from the dataset were **Status**, **Country**, **Disease**, and **Victims**.
 - <span style="color:#785EF0">SciREX</span> (Jain et al., 2020) is a recent dataset for scientific document-level IE, consisting of annotated articles on Machine Learning from Papers with Code, where we specifically focus on its 4-ary relation extraction sub-task. The slots/roles that we chose to extract are **Material**, **Method**, **Metric** and **Task**.
 
 <h3><p style="color:#FE6100"><b>Evaluation</b></p></h3>
+
+<img src = "assets/f1eq.png" class = "center"/>
+<br>Figure 2: F1 Evaluation Metric.
 
 We use F1 score from MUC-4 (Chinchor, 1992) which is shown in Figure 2 above. As the precision and recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
