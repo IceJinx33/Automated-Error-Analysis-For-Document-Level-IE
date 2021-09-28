@@ -57,6 +57,7 @@ There are a fixed set of transformations involved in changing  the  predicted  t
 <br>
 Figure 3: Formula for absolute SCS.
 <br>
+
 <img src = "assets/scsgeo.png"/>
 
 <br>
