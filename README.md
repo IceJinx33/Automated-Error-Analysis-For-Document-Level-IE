@@ -2,7 +2,6 @@
 
 <br>
 <img src = "assets/error_analysis_system.png"/>
-
 <br>
 Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).
 
@@ -17,7 +16,6 @@ In this work, we introduce several representative document-level IE datasets. Th
 <h3><p style="color:#FE6100"><b>Datasets</b></p></h3>
 
 <img src = "assets/dataset_stats.png"/>
-
 <br>
 Table 1: Dataset Statistics. A relevant document has one or more templates.
 
@@ -29,9 +27,9 @@ Table 1 presents statistics for the three datasets that we conduct experiments a
 <h3><p style="color:#FE6100"><b>Evaluation</b></p></h3>
 
 <img src = "assets/f1eq_white.png">
-
 <br>
 Figure 2: F1 Evaluation Metric.
+
 We use <span style="color:#785EF0">F1 score</span> from MUC-4 (Chinchor, 1992) which is shown above in Figure 2, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
 
 <h3><p style="color:#FE6100"><b>Methodology</b></p></h3>
@@ -53,17 +51,23 @@ There are a fixed set of transformations involved in changing  the  predicted  t
   - **geometric mean**: This mode captures the degree of disjointedness between spans x and y by dividing the length of the overlap between the two spans with respective to each of their lengths, multiplying those two fractions and subtracting the final result from 1. If *si* is the length of the intersection of spans x and y, and neither x nor y have length 0, *SCS* is calculated as shown below. Else, *SCS* is 1.
 
 <img src = "assets/scsabs.png"/> 
-
 <br>
 Figure 3: Formula for absolute SCS.
+
 <br>
-
 <img src = "assets/scsgeo.png"/>
-
 <br>
 Figure 4: Formula for geometric mean SCS.
 
   Thus, if the predicted role filler is an exact match for the gold role filler, the *SCS* is 0. If there is some overlap between the spans, the *SCS* is between 0 and 1 (not inclusive), and if there is no overlap between the spans, the *SCS* is 1.
+  
+  2. <span style="color:#785EF0">Alter Role</span> changes the role of a role filler to another role within the same template.
+  3. <span style="color:#785EF0">Remove Duplicate Role Filler</span> removes a role filler that is co-referent to an already matched role filler.
+  4. <span style="color:#785EF0">Remove Cross Template Spurious Role Filler</span> removes a role filler that would be correct if present in another template (in the same role).
+  5. <span style="color:#785EF0">Remove Unrelated Spurious Role Filler</span> removes a role filler that has not been mentioned in any of the gold templates for a given document.
+  6. <span style="color:#785EF0">Introduce Missing Role Filler</span> introduces a role filler that was not present in the predicted template but was required to be present in the matching gold template.
+  7. <span style="color:#785EF0">Remove Spurious Template</span> removes a predicted template that could not be matched to any gold template for a given document.
+  8. <span style="color:#785EF0">Introduce Missing Template</span> introduces a template that can be matched to an unmatched gold template for a given document.
 
 <h3><p style="color:#FE6100"><b>Error Type Mappings</b></p></h3>
 
