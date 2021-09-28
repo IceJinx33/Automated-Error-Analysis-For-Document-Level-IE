@@ -3,7 +3,7 @@
 <br>
 <img src = "assets/error_analysis_system.png"/>
 <br>
-Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).
+*Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).*
 
 <h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
 
@@ -17,7 +17,7 @@ In this work, we introduce several representative document-level IE datasets. Th
 
 <img src = "assets/dataset_stats.png"/>
 <br>
-Table 1: Dataset Statistics. A relevant document has one or more templates.
+*Table 1: Dataset Statistics. A relevant document has one or more templates.*
 
 Table 1 presents statistics for the three datasets that we conduct experiments and error analysis on. 
 - <span style="color:#785EF0">MUC-4</span> (MUC-4, 1992) consists of news, each of which describes one or more terrorist incidents. The slots/roles that we chose to extract from the dataset were *Incident Type*, *Perpetrator (Individual)*, *Perpetrator (Organization)*, *(Physical) Target*, *Victim* and *Weapon*.
@@ -28,7 +28,7 @@ Table 1 presents statistics for the three datasets that we conduct experiments a
 
 <img src = "assets/f1eq_white.png">
 <br>
-Figure 2: F1 Evaluation Metric.
+*Figure 2: F1 Evaluation Metric.*
 
 We use <span style="color:#785EF0">F1 score</span> from MUC-4 (Chinchor, 1992) which is shown above in Figure 2, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
 
@@ -46,19 +46,19 @@ Given the input consisting of the predicted and gold templates for every documen
 
 <img src = "assets/transformations.png"/>
 <br>
-Figure 3: Automated transformations convert predicted templates (on the left) to desired templates (on the right). Arrows represent transformations. Colored circles represent role-filler entity mentions.
+*Figure 3: Automated transformations convert predicted templates (on the left) to desired templates (on the right). Arrows represent transformations. Colored circles represent role-filler entity mentions.*
 <br>
 
 There are a fixed set of transformations involved in changing  the  predicted  templates  to  the  desired templates (with 100% F1) as detailed below:
 
 <img src = "assets/scsabs.png"/> 
 <br>
-Figure 4: Formula for absolute SCS.
+*Figure 4: Formula for absolute SCS.*
 
 <br>
 <img src = "assets/scsgeo.png"/>
 <br>
-Figure 5: Formula for geometric mean SCS.
+*Figure 5: Formula for geometric mean SCS.*
 
   1. <span style="color:#785EF0">Alter Span</span> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. As seen in Figure 4 above, to calculate the span comparison score between two spans x and y, we use one of two scoring modes:
   - **absolute**:  This mode captures the (positive) distance between the starting indices (and ending indices) of spans x and y in the document, and scales that value by the sum of the lengths of x and y, capping it at a maximum of 1.
@@ -76,6 +76,6 @@ Figure 5: Formula for geometric mean SCS.
 
 <img src = "assets/errors.png"/>
 <br>
-Table 2: Examples of the Error Types from the MUC-4 dataset. For each template, in every role, the role fillers within brackets refer to the same entity, while role fillers in different brackets refer to different entities. The text in bold black indicates the error in the prediction.
+*Table 2: Examples of the Error Types from the MUC-4 dataset. For each template, in every role, the role fillers within brackets refer to the same entity, while role fillers in different brackets refer to different entities. The text in bold black indicates the error in the prediction.*
 
 <h3><p style="color:#FE6100"><b>Results and Analysis</b></p></h3>
