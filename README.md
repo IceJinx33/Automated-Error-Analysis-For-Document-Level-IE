@@ -25,9 +25,8 @@ Table 1 presents statistics for the three datasets that we conduct experiments a
 <h3><p style="color:#FE6100"><b>Evaluation</b></p></h3>
 
 <img src = "assets/f1eq_white.png">
-<br>Figure 2: F1 Evaluation Metric.
 
-We use <span style="color:#785EF0">F1 score</span> from MUC-4 (Chinchor, 1992) which is shown in Figure 2 above, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
+We use <span style="color:#785EF0">F1 score</span> from MUC-4 (Chinchor, 1992) which is shown above, where Precision is a measure of the fraction of predicted role fillers that are correct, while Recall is a measure of the fraction of expected role fillers that are correctly predicted. As the Precision and Recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
 
 <h3><p style="color:#FE6100"><b>Methodology</b></p></h3>
 
