@@ -49,7 +49,7 @@ Given the input consisting of the predicted and gold templates for every documen
 *Figure 3: Automated transformations convert predicted templates (on the left) to desired templates (on the right). Arrows represent transformations. Colored circles represent role-filler entity mentions.*
 <br>
 
-There are a fixed set of transformations involved in changing  the  predicted  templates  to  the  desired templates (with 100% F1) as detailed below:
+There are a fixed set of transformations involved in changing the predicted templates to the desired templates (with 100% F1) as detailed below:
 
 <img src = "assets/scsabs.png"/> 
 <br>
@@ -76,6 +76,22 @@ There are a fixed set of transformations involved in changing  the  predicted  t
 
 <img src = "assets/errors.png"/>
 <br>
-*Table 2: Examples of the Error Types from the MUC-4 dataset. For each template, in every role, the role fillers within brackets refer to the same entity, while role fillers in different brackets refer to different entities. The text in bold black indicates the error in the prediction.*
+*Table 2: Examples of the Error Types from the MUC-4 dataset. For each template, in every role, the role fillers within brackets refer to the same entity, while role fillers in different brackets refer to different entities. The text in bold black indicates the error in the prediction. T1 and T2 refer to Template 1 and Template 2 respectively.*
 
+The  transformations in the Transformations Section are mapped onto thirteen error types. In some cases, a single transformation maps onto a single error, while in others a single error is mapped to a specific list of transformations applied in the error correction process.
+
+1. <span style="color:#785EF0">Span Error.</span> Each singleton Alter Span transformation is mapped to a Span Error. A Span Error occurs when a predicted role filler becomes an exact match to the a gold role filer only upon span alteration.
+2. <span style="color:#785EF0">Duplicate Role Filler.</span> Each singleton Remove Duplicate Role Filler transformation is mapped to a Duplicate Role Filler error. A Duplicate Role Filler error occurs when a spurious role filler is co-referent to an already matched role filler and is treated as a separate entity.  This happens when the system fails at co-reference resolution.
+3. <span style="color:#785EF0">Duplicate Partially Matched Role Filler.</span> Same as 2. above, but with an added Alter Span transformation applied first to account for partial matching.
+4. <span style="color:#785EF0">(Within Template) Incorrect Role.</span> Each singleton Alter Role transformation is mapped to a (Within Template) Incorrect Role. A (Within Template) Incorrect Role error occurs when a spurious role filler is assigned to the incorrect role within the same template, i.e. the role filler would have been correct if present in another slot/role in the same template. This happens when the system fails at correct role assignment.
+5. <span style="color:#785EF0">(Within Template) Incorrect Role + Partially Matched Filler.</span> Same as 4. above, but with an added Alter Span transformation applied first to account for partial matching.
+6. <span style="color:#785EF0">Wrong Template for Role Filler.</span> Each singleton Remove Cross Template Spurious Role Filler transformation is mapped to a Wrong Template for Role Filler error. A Wrong Template for Role Filler error occurs when a spurious role filler in one template can be assigned to the correct role in another template, i.e., it would be correct if it had been placed in another template in the same role. This happens when the system fails at correct event assignment.
+7. <span style="color:#785EF0">Wrong Template for Partially Matched Role Filler.</span> Same as 6. above, but with an added Alter Span transformation applied first to account for partial matching.
+8. <span style="color:#785EF0">Wrong Template + Wrong Role.</span> An Alter Role and a Remove Cross Template Spurious Role Filler transformation are applied to the same predicted role filler in that order to be mapped to a Wrong Template + Wrong Role error.  A Wrong Template + Wrong Role error occurs when a spurious role filler can be assigned to another role in another template. This happens when the system fails at correct role assignment and event assignment.
+9. <span style="color:#785EF0">Wrong Template + Wrong Role + Partially Matched Filler. Same as 8. above, but with an added Alter Span transformation applied first to account for partial matching.
+10. <span style="color:#785EF0">Spurious Role Filler.</span> Each singleton Remove Unrelated Spurious Role Filler transformation is mapped to a Spurious Role Filler error.  A Spurious Role Filler error occurs when a mention is extracted from the text with no connection to the gold templates.
+11. <span style="color:#785EF0">Missing Role Filler.</span> Each singleton Introduce Missing Role Filler transformation is mapped to a Missing Role Filler error. A Missing Role Filler error occurs when a role filler is present in the gold template but not the predicted template for a given role.
+12. <span style="color:#785EF0">Spurious Template.</span> Each singleton Remove Spurious Template is mapped to a Spurious Template error. A Spurious Template error occurs when an extra predicted template is present that cannot be matched to a gold template.
+13. <span style="color:#785EF0">Missing Template.</span> Each singleton Introduce Missing Template transformation is mapped to a Missing Template error. A Missing Template error occurs when there is a gold template remaining that has no matching predicted template.
+  
 <h3><p style="color:#FE6100"><b>Results and Analysis</b></p></h3>
