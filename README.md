@@ -112,7 +112,7 @@ The  transformations in the Transformations Section are mapped onto thirteen err
   
 <span style="color:#785EF0">GTT will perform better than DyGIE++ when there is more than one relevant event in the document.</span>
   
-  From the error count results in Figure 2, we see that for all datasets, GTT models make fewer Missing Template errors than DyGIE++ mod- els do, except for the DyGIE++ (BERT) model on the SciREX dataset, which has fewer Missing Template errors when compared to the GTT (BERT) model. This is possibly because DyGIE++ (BERT) is prone to overgeneration - there are significantly more spurious role fillers as compared to the other models. Since we use a heuristic that puts all the extracted role fillers in one template, this increases the probability that there was a possible match to a gold template, reducing the number of Missing Template Errors.
+  From the error count results in Figure 6, we see that for all datasets, GTT models make fewer Missing Template errors than DyGIE++ mod- els do, except for the DyGIE++ (BERT) model on the SciREX dataset, which has fewer Missing Template errors when compared to the GTT (BERT) model. This is possibly because DyGIE++ (BERT) is prone to overgeneration - there are significantly more spurious role fillers as compared to the other models. Since we use a heuristic that puts all the extracted role fillers in one template, this increases the probability that there was a possible match to a gold template, reducing the number of Missing Template Errors.
   
 <span style="color:#785EF0">DyGIE++ is worse at coreference resolution when compared to GTT as DyGIE++ makes more duplicate role filler errors across all datasets.</span>
   
