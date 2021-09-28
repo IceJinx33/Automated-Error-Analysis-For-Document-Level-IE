@@ -2,7 +2,8 @@
 
 <br>
 <img src = "assets/error_analysis_system.png"/>
-<br>Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).
+
+Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).
 
 <h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
 
@@ -15,7 +16,8 @@ In this work, we introduce several representative document-level IE datasets. Th
 <h3><p style="color:#FE6100"><b>Datasets</b></p></h3>
 
 <img src = "assets/dataset_stats.png"/>
-<br>Table 1: Dataset Statistics. A relevant document has one or more templates.
+
+Table 1: Dataset Statistics. A relevant document has one or more templates.
 
 Table 1 presents statistics for the three datasets that we conduct experiments and error analysis on. 
 - <span style="color:#785EF0"><b>MUC-4</b></span> (MUC-4, 1992) consists of news, each of which describes one or more terrorist incidents. The slots/roles that we chose to extract from the dataset were *Incident Type*, *Perpetrator (Individual)*, *Perpetrator (Organization)*, *(Physical) Target*, *Victim* and *Weapon*.
