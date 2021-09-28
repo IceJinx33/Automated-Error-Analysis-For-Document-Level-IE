@@ -113,7 +113,7 @@ The  transformations in the Transformations Section are mapped onto thirteen err
 <br>
 *Figure 8: Error statistics for all dataset outputs from all available models.*
   
-<span style="color:#785EF0">Models perform poorly on scientific text (ProMed, SciREX) as compared to news (MUC-4).</span> 
+<h4><span style="color:#785EF0">Models perform poorly on scientific text (ProMed, SciREX) as compared to news (MUC-4).</span></h4> 
 
 <br>
 <img src = "assets/metrics.png"/>
@@ -124,9 +124,9 @@ The  transformations in the Transformations Section are mapped onto thirteen err
   
   We see an increase in the F1 score in all SciBERT-based models when compared to their BERT counterparts in the SciREX dataset. In the ProMed dataset, even though the SciBERT-based models do perform better in the scientific slots (Disease, Victims), BERT-based models perform significantly better on the non-scientific slots (Status, Country), and hence achieve a higher total F1 score.
   
-<span style="color:#785EF0">GTT will perform better than DyGIE++ when there is more than one relevant event in the document.</span>
+<h4><span style="color:#785EF0">GTT will perform better than DyGIE++ when there is more than one relevant event in the document.</span></h4>
   
   From the error count results in Figure 6, we see that for all datasets, GTT models make fewer Missing Template errors than DyGIE++ mod- els do, except for the DyGIE++ (BERT) model on the SciREX dataset, which has fewer Missing Template errors when compared to the GTT (BERT) model. This is possibly because DyGIE++ (BERT) is prone to overgeneration - there are significantly more spurious role fillers as compared to the other models. Since we use a heuristic that puts all the extracted role fillers in one template, this increases the probability that there was a possible match to a gold template, reducing the number of Missing Template Errors.
   
-<span style="color:#785EF0">DyGIE++ is worse at coreference resolution when compared to GTT as DyGIE++ makes more duplicate role filler errors across all datasets.</span>
+<h4><span style="color:#785EF0">DyGIE++ is worse at coreference resolution when compared to GTT as DyGIE++ makes more duplicate role filler errors across all datasets.</span></h4>
   
