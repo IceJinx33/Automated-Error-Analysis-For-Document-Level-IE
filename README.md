@@ -46,7 +46,7 @@ Given the input consisting of the predicted and gold templates for every documen
 
 There are a fixed set of transformations involved in changing  the  predicted  templates  to  the  desired templates (with 100% F1) as detailed below:
 
-  1. <b><span style="color:#785EF0">Alter Span</span></b> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. To calculate the span comparison score between two spans x and y, we use one of two scoring modes:
+  1. <h6><span style="color:#785EF0">Alter Span</span></h6> transforms a role filler into a gold role filler which has the lowest <span style="color:#785EF0">span comparison score (<i>SCS</i>)</span>. To calculate the span comparison score between two spans x and y, we use one of two scoring modes:
   - **absolute**:  This mode captures the (positive) distance between the starting indices (and ending indices) of spans x and y in the document, and scales that value by the sum of the lengths of x and y, capping it at a maximum of 1.
   
   <img src = "assets/scsabs.png"/>
