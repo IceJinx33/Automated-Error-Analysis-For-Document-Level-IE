@@ -1,7 +1,7 @@
 <h1><p style="color:#DC267F"><b>Automated Error Analysis for Document Level Information Extraction From Scientific Text</b></p></h1>
 
 <br>
-<img src = "assets/error_analysis_system.png" class = "center"/>
+<img src = "assets/error_analysis_system.png" height="300px"/>
 <br>Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).
 
 <h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
@@ -14,7 +14,7 @@ In this work, we introduce several representative document-level IE datasets. Th
 
 <h3><p style="color:#FE6100"><b>Datasets</b></p></h3>
 
-<img src = "assets/dataset_stats.png" class = "center"/>
+<img src = "assets/dataset_stats.png"/>
 <br>Table 1: Dataset Statistics. A relevant document has one or more templates.
 
 Table 1 presents statistics for the three datasets that we conduct experiments and error analysis on. 
@@ -24,7 +24,7 @@ Table 1 presents statistics for the three datasets that we conduct experiments a
 
 <h3><p style="color:#FE6100"><b>Evaluation</b></p></h3>
 
-<img src = "assets/f1eq_white.png" class = "center"/>
+<img src = "assets/f1eq_white.png">
 <br>Figure 2: F1 Evaluation Metric.
 
 We use F1 score from MUC-4 (Chinchor, 1992) which is shown in Figure 2 above. As the precision and recall vary by how each predicted template is individually unmatched or matched with one gold template, we enumerate F1 scores for all possible mappings and use the highest F1 score matching to serve as a guide to our transformation and error analysis process.
