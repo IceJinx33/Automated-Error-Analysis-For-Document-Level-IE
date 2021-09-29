@@ -3,7 +3,6 @@
 See project contributors <a href="#projPeople">below</a>.
 <hr>
 <br>
-
 <h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
 
 <img src = "assets/error_analysis_system.png" width = "100%"/>
