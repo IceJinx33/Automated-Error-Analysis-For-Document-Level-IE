@@ -2,7 +2,6 @@
 <p>To be presented at the <a href="https://scinlp.org">SciNLP Workshop</a> at <a href="https://www.akbc.ws/2021/workshops/">AKBC 2021</a>.</p>
 See project contributors <a href="#projPeople">below</a>.
 <hr>
-<br>
 <h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
 
 <img src = "assets/error_analysis_system.png" width = "100%"/>
