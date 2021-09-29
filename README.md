@@ -15,8 +15,10 @@
   <p>Claire Cardie (cardie@cs.cornell.edu) </p>
   We would like to thank Cornell University's <a href="https://www.cs.cornell.edu/undergrad/uresch/computer-science-undergraduate-research-program-csurp">Computer Science Undergraduate Research Program (CSURP)</a> for giving us the opportunity to work on this project during Summer 2021.
 </div>
-
 <br>
+<hr>
+
+
 <img src = "assets/error_analysis_system.png" width = "100%"/>
 <br>
 *Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).*
