@@ -2,6 +2,7 @@
 <p>To be presented at the <a href="https://scinlp.org">SciNLP Workshop</a> at <a href="https://www.akbc.ws/2021/workshops/">AKBC 2021</a></p>
 
 <hr>
+<br>
 
 <img src = "assets/error_analysis_system.png" width = "100%"/>
 <br>
