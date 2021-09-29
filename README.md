@@ -1,4 +1,20 @@
 <h1><p style="color:#DC267F"><b>Automated Error Analysis for Document Level Information Extraction From Scientific Text</b></p></h1>
+<p>To be presented at the SciNLP Workshop at <a href="https://www.akbc.ws/2021/">AKBC 2021>/a>
+
+<br>
+<hr>
+<div class="People">
+  <h5><p style="color:#785EF0">CONTRIBUTORS:</p></h5>
+  <p>Aliva Das (ad677@cornell.edu)</p>
+  <p>Xinya Du (xdu@cs.cornell.edu)</p>
+  <p>Barry Wang (zw545@cornell.edu)</p>
+  <p>Jiayuan Gu (jg844@cornell.edu)</p>
+  <p>Kejian Shi (ks4765@nyu.edu)</p>
+  <p>Thomas Porter (tjp78@cornell.edu)</p>
+  <h5><p style="color:#FE6100">ADVISOR:</p></h5>
+  <p>Claire Cardie (cardie@cs.cornell.edu) </p>
+  We would like to thank Cornell University's <a href="https://www.cs.cornell.edu/undergrad/uresch/computer-science-undergraduate-research-program-csurp">Computer Science Undergraduate Research Program (CSURP)</a> for giving us the opportunity to work on this project during Summer 2021.
+</div>
 
 <br>
 <img src = "assets/error_analysis_system.png" width = "100%"/>
@@ -132,16 +148,4 @@ The  transformations in the Transformations Section are mapped onto thirteen err
 
 <br>
 <hr>
-<div class="People">
-  <h5><p style="color:#785EF0">CONTRIBUTORS:</p></h5>
-  <p>Aliva Das (ad677@cornell.edu)</p>
-  <p>Xinya Du (xdu@cs.cornell.edu)</p>
-  <p>Barry Wang (zw545@cornell.edu)</p>
-  <p>Jiayuan Gu (jg844@cornell.edu)</p>
-  <p>Kejian Shi (ks4765@nyu.edu)</p>
-  <p>Thomas Porter (tjp78@cornell.edu)</p>
-  <h5><p style="color:#FE6100">ADVISOR:</p></h5>
-  <p>Claire Cardie (cardie@cs.cornell.edu) </p>
-  We would like to thank Cornell University's <a href="https://www.cs.cornell.edu/undergrad/uresch/computer-science-undergraduate-research-program-csurp">Computer Science Undergraduate Research Program (CSURP)</a> for giving us the opportunity to work on this project during Summer 2021.
-</div>
   
