@@ -1,5 +1,5 @@
 <h1><p style="color:#DC267F"><b>Automated Error Analysis for Document Level Information Extraction From Scientific Text</b></p></h1>
-<p>To be presented at the SciNLP Workshop at <a href="https://www.akbc.ws/2021/">AKBC 2021</a>
+<p>To be presented at the <a href="https://scinlp.org">SciNLP Workshop</a> at <a href="https://www.akbc.ws/2021/workshops/">AKBC 2021</a>
 
 <br>
 <hr>
@@ -148,4 +148,3 @@ The  transformations in the Transformations Section are mapped onto thirteen err
 
 <br>
 <hr>
-  
