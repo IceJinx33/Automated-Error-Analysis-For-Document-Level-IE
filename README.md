@@ -1,9 +1,8 @@
 <h1><p style="color:#DC267F"><b>Automated Error Analysis for Document Level Information Extraction From Scientific Text</b></p></h1>
-<p>To be presented at the <a href="https://scinlp.org">SciNLP Workshop</a> at <a href="https://www.akbc.ws/2021/workshops/">AKBC 2021</a></p>
-
+<p>To be presented at the <a href="https://scinlp.org">SciNLP Workshop</a> at <a href="https://www.akbc.ws/2021/workshops/">AKBC 2021</a></p>.
+See contributors <a href="#projPeople">below</a>.
 <hr>
 <br>
-
 <img src = "assets/error_analysis_system.png" width = "100%"/>
 <br>
 *Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).*
@@ -135,7 +134,7 @@ The  transformations in the Transformations Section are mapped onto thirteen err
 
 <br>
 <hr>
-<div class="People">
+<div class="People" id="projPeople">
   <h5><p style="color:#785EF0">CONTRIBUTORS:</p></h5>
   <p>Aliva Das (ad677@cornell.edu)</p>
   <p>Xinya Du (xdu@cs.cornell.edu)</p>
