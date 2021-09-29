@@ -3,11 +3,12 @@
 See project contributors <a href="#projPeople">below</a>.
 <hr>
 <br>
+
+<h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
+
 <img src = "assets/error_analysis_system.png" width = "100%"/>
 <br>
 *Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).*
-
-<h3><p style="color:#FE6100"><b>Introduction</b></p></h3>
 
 <p style="color:black">
 Recent works proposing modern NLP models for the document-level information extraction tasks (Du et al., 2021; Li et al., 2021; Jain et al., 2020) have their performance measured by different datasets via varying metrics, with <span style="color:#785EF0">limited, often manual analysis of model errors which are less informative</span> (e.g., scores alone cannot detail model’s tendency to assign incorrect types to selected noun phrases, or frequency of spurious templates/clustering generation). <span style="color:#785EF0">There has not been a systematic investigation on models’ error profiles across domain-diverse document-level IE datasets.</span></p>
