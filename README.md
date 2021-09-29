@@ -142,7 +142,7 @@ The  transformations in the Transformations Section are mapped onto thirteen err
   <p>Kejian Shi (ks4765@nyu.edu)</p>
   <p>Thomas Porter (tjp78@cornell.edu)</p>
   <h5><p style="color:#FE6100">ADVISOR:</p></h5>
-  <p>Claire Cardie (cardie@cs.cornell.edu </p>
+  <p>Claire Cardie (cardie@cs.cornell.edu)</p>
   We would like to thank Cornell University's <a href="https://www.cs.cornell.edu/undergrad/uresch/computer-science-undergraduate-research-program-csurp">Computer Science Undergraduate Research Program (CSURP)</a> for giving us the opportunity to work on this project during Summer 2021.
 </div>
 <hr>
