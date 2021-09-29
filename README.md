@@ -15,7 +15,7 @@ In this work, we introduce several representative document-level IE datasets. Th
 
 <h3><p style="color:#FE6100"><b>Datasets</b></p></h3>
 
-<img src = "assets/dataset_stats.png"/>
+<img src = "assets/dataset_stats.png" width = "100%"/>
 <br>
 *Table 1: Dataset Statistics. A relevant document has one or more templates.*
 
@@ -44,7 +44,7 @@ Given the input consisting of the predicted and gold templates for every documen
 
 <h3><p style="color:#FE6100"><b>Transformations</b></p></h3>
 
-<img src = "assets/transformations.png"/>
+<img src = "assets/transformations.png" width = "100%"/>
 <br>
 *Figure 3: Automated transformations convert predicted templates (on the left) to desired templates (on the right). Arrows represent transformations. Colored circles represent role-filler entity mentions.*
 <br>
@@ -73,7 +73,7 @@ There are a fixed set of transformations involved in changing the predicted temp
 
 <h3><p style="color:#FE6100"><b>Error Type Mappings</b></p></h3>
 
-<img src = "assets/errors.png"/>
+<img src = "assets/errors.png" width = "100%"/>
 <br>
 *Table 2: Examples of the Error Types from the MUC-4 dataset. For each template, in every role, the role fillers within brackets refer to the same entity, while role fillers in different brackets refer to different entities. The text in bold black indicates the error in the prediction. T1 and T2 refer to Template 1 and Template 2 respectively.*
 
@@ -104,17 +104,17 @@ The  transformations in the Transformations Section are mapped onto thirteen err
   
 <h3><p style="color:#FE6100"><b>Results and Analysis</b></p></h3>
 
-<img src = "assets/output.png"/> 
+<img src = "assets/output.png" width = "100%"/> 
 <br>
 *Figure 7: Sample analysis of predicted templates for a document from our automated error analysis tool.*
 
 <br>
-<img src = "assets/errorcounts.png"/>
+<img src = "assets/errorcounts.png" width = "100%"/>
 <br>
 *Figure 8: Error statistics for all dataset outputs from all available models.*
 
 <br>
-<img src = "assets/metrics.png"/>
+<img src = "assets/metrics.png" width = "100%"/>
 <br>
 *Table 3: Precision, Recall and F1 Scores (%).*
 
