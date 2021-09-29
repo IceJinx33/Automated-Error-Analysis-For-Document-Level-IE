@@ -1,6 +1,8 @@
 <h1><p style="color:#DC267F"><b>Automated Error Analysis for Document Level Information Extraction From Scientific Text</b></p></h1>
 <p>To be presented at the <a href="https://scinlp.org">SciNLP Workshop</a> at <a href="https://www.akbc.ws/2021/workshops/">AKBC 2021</a></p>
 
+<hr>
+
 <img src = "assets/error_analysis_system.png" width = "100%"/>
 <br>
 *Figure 1: The document-level extraction task (left) and the automatic error analysis process (right).*
